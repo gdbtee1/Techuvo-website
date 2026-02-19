@@ -1,0 +1,579 @@
+.nav-links{
+    color:black;
+    text-decoration:none;
+}
+.nav-links:hover {
+    color: #007BFF;         /* color on hover */
+    text-decoration: none;  /* still no underline */
+}
+
+#navigation{
+   display:flex;
+   justify-content:flex-end;
+   gap:75px;
+   margin-right:100px;
+   margin-top:30px;
+}
+/* Reset body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 540px; /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:white; /* placeholder dark background, replace with image if you want */
+  color: black;
+  overflow: hidden;
+}
+
+/* Techuvo text */
+.hero-text {
+  font-size: 8vw; /* responsive size */
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+/* Animation for fade in/out */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: scale(0.8); }
+  20% { opacity: 1; transform: scale(1); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+#subtext{
+    text-align:center;
+}
+.services {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base styling for service sections */
+.service {
+  position: relative;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Yin-Yang swirl backgrounds */
+.service-1 {
+  background: radial-gradient(circle at top left, #0f0f0f 50%, #ffffff 50%);
+  color: #fff;
+}
+
+.service-2 {
+  background: radial-gradient(circle at top left, #ffffff 50%, #0f0f0f 50%);
+  color: #0f0f0f;
+}
+
+.service-3 {
+  background: radial-gradient(circle at top left, #0f0f0f 50%, #ffffff 50%);
+  color: #fff;
+}
+
+/* Optional swirl enhancement using pseudo-element */
+.service::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  top: -50%;
+  left: -50%;
+  background: inherit;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+/* Text overlay to improve readability */
+.service h2, .service p {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.5); /* dark overlay on mixed backgrounds */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  margin: 10px 0;
+}
+
+/* Light overlay for the white-heavy section */
+.service-2 h2, .service-2 p {
+  background-color: rgba(255,255,255,0.6);
+}
+
+/* Optional responsive font sizes */
+.service h2 {
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.service p {
+  font-size: 1.5vw;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .service h2 {
+    font-size: 6vw;
+  }
+  .service p {
+    font-size: 3.5vw;
+  }
+  .service {
+    padding: 80px 15px;
+  }
+}
+a {
+    text-decoration: none; /* removes underline */
+    color: inherit;        /* keeps your current text color */
+}
+.about-hero {
+  height: 300px; /* smaller than home page hero */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white; /* keep consistent with home page scheme */
+}
+
+.about-text {
+  font-size: 6vw; /* slightly smaller than home hero */
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out infinite; /* same animation as home page */
+  color: black;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: scale(0.8); }
+  20% { opacity: 1; transform: scale(1); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+/* Container for consistent padding */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Mission Section */
+.about-mission h2 {
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-mission p {
+  font-size: 1.5vw;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Values Section */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.value-card {
+  background: #ffffff;
+  color: #000;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.value-card h3 {
+  font-size: 2vw;
+  margin-bottom: 10px;
+  color: #007BFF; /* bluish accent */
+}
+
+.value-card p {
+  font-size: 1.2vw;
+  line-height: 1.5;
+}
+
+/* Process Section */
+.process-steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: #f9f9f9;
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-width: 300px;
+  flex: 1;
+}
+
+.step h3 {
+  font-size: 1.8vw;
+  margin-bottom: 15px;
+  color: #007BFF;
+}
+
+.step p {
+  font-size: 1.2vw;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.about-cta {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 18px 40px;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007BFF;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-mission h2 {
+    font-size: 6vw;
+  }
+  .about-mission p {
+    font-size: 3.5vw;
+  }
+  .value-card h3 {
+    font-size: 4vw;
+  }
+  .value-card p {
+    font-size: 3vw;
+  }
+  .step h3 {
+    font-size: 3.5vw;
+  }
+  .step p {
+    font-size: 3vw;
+  }
+  .cta-button {
+    font-size: 4vw;
+    padding: 15px 30px;
+  }
+}
+.services-hero {
+  height: 300px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white; /* consistent with home/about pages */
+  text-align: center;
+  overflow: hidden;
+}
+
+.services-text {
+  font-size: 6vw; /* slightly smaller than home hero */
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out infinite; /* same animation as home/about */
+  color: black;
+}
+
+.services-subtext {
+  font-size: 2.5vw;
+  color: #000000cc; /* semi-transparent black */
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInOut 4s ease-in-out infinite;
+}
+
+/* Reuse the same fade animation from home/hero */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: scale(0.8); }
+  20% { opacity: 1; transform: scale(1); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+/* Services Hero */
+.services-hero {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.services-text {
+  font-size: 6vw;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out infinite;
+  color: black;
+}
+
+.services-subtext {
+  font-size: 2.5vw;
+  color: #000000cc;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInOut 4s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: scale(0.8); }
+  20% { opacity: 1; transform: scale(1); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+/* Hero Laptop Banner */
+.hero-laptop {
+  height: 400px;
+  background: url('laptop-mockup.png') no-repeat center center/contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-laptop-overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.hero-laptop-overlay h2 {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: black;
+}
+
+/* Services Packages */
+.services-packages {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.service-card h3 {
+  font-size: 2vw;
+  color: #007BFF; /* bluish accent */
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1.2vw;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-text {
+    font-size: 8vw;
+  }
+  .services-subtext {
+    font-size: 4vw;
+  }
+  .hero-laptop-overlay h2 {
+    font-size: 4vw;
+  }
+  .service-card h3 {
+    font-size: 4vw;
+  }
+  .service-card p {
+    font-size: 3vw;
+  }
+}
+/* Full-page Portfolio Coming Soon */
+.portfolio-coming-soon {
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* Animated Messages (no absolute positioning) */
+.marquee-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80px; /* enough space for one line of text */
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-message {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #007BFF;
+  opacity: 0;
+  animation: fadeMessages 9s infinite;
+  margin: 0;
+}
+
+/* stagger each message for sequential fade-in */
+.marquee-message:nth-child(1) { animation-delay: 0s; }
+.marquee-message:nth-child(2) { animation-delay: 3s; }
+.marquee-message:nth-child(3) { animation-delay: 6s; }
+
+@keyframes fadeMessages {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 20px 50px;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007BFF;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marquee-message { font-size: 5vw; }
+  .cta-button { font-size: 4vw; padding: 15px 30px; }
+}
+/* Contact Page */
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e0ff 0%, #f9f9f9 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 3vw;
+  color: #007BFF;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  font-size: 1.5vw;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Form Styles */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1.2vw;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 18px 50px;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container h1 { font-size: 6vw; }
+  .contact-container p { font-size: 3vw; }
+  .contact-form input,
+  .contact-form textarea { font-size: 3vw; padding: 12px 15px; }
+  .submit-button { font-size: 4vw; padding: 15px 30px; }
+}
